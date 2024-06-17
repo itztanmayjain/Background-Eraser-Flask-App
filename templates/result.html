@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #B6DBF6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: -30px;
+        }
+        .image {
+            margin: 20px;
+        }
+        img{
+            max-width: 500px;
+            max-height: 600px;
+            margin-left: 80px;
+        }
+        .image p
+        {
+            font-size: 25px;
+            margin-top: 15px;
+        }
+        .download-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+	        font-size: 16px;
+            width: auto;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href='/'>Back</a>
+    </nav>
+    {% if rembg_img_name %}
+    <div class="container">
+        <div class="image-container">
+            <div class="image">
+                <img src='../static/uploads/{{ org_img_name }}' alt="Image 1">
+                <p>Original</p>
+            </div>
+            <div class="image">
+                <img src='../static/uploads/{{ rembg_img_name }}' alt="Image 2">
+                <p>No Background</p>
+            </div>
+        </div>
+       <a download href='../static/uploads/{{ rembg_img_name }}'> <button class="download-button">Download</button> </a>
+    </div>
+    {% endif %}
+</body>
+</html>
