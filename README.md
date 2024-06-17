@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ## Screenshots
 
-![App Screenshot](https://github.com/Background-Eraser-Flask-App/output.gif)
+![](https://github.com/itztanmayjain/Background-Eraser-Flask-App/blob/main/output.gif))
 
 
 ## Authors
